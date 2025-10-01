@@ -13,10 +13,10 @@
 				return [Math.floor(infclass(n%1)),infclass((n-1)+(1/(1-n))%1)].flat()
 			}
 		}
-		(!function update() {
+		!function update() {
 			a += 0.001 + Math.sqrt(a-1)/1000
 			document.getElementById("inf-class").innerText = infclass(a)
 			requestAnimationFrame(update)
-		})()
+		}()
 	</script>
 </body>
