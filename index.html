@@ -15,7 +15,7 @@
 		}
 		!function update() {
 			a += 0.001 + Math.sqrt(a-1)/1000
-			document.getElementById("inf-class").innerText = infclass(Math.log10(a))
+			document.getElementById("inf-class").innerText = infclass(Math.log2(a))
 			requestAnimationFrame(update)
 		}()
 	</script>
