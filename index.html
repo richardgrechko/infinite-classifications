@@ -10,12 +10,12 @@
 			if (n < 1) {
 				return Math.floor(1/(1-n))
 			} else {
-				return [Math.floor(infclass(n%1)),infclass((n-1)+(1/(1-n))%1)].flat()
+				return [Math.floor(infclass(n%1)),infclass((n-1)+(1/(1-(n%1)))%1)].flat()
 			}
 		}
 		!function update() {
 			a += 0.001 + Math.sqrt(a-1)/1000
-			document.getElementById("inf-class").innerText = infclass(a)
+			document.getElementById("inf-class").innerText = infclass(Math.log10(a))
 			requestAnimationFrame(update)
 		}()
 	</script>
