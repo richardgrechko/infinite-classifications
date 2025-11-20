@@ -8,7 +8,7 @@
 		let a = 1
 		function infclass(n) {
 			if (n < 1) {
-				return Math.floor(Math.log2(1/(1-n))+1)
+				return [2**Math.floor(Math.log2(1/(1-n))+1)]
 			} else {
 				return [Math.floor(infclass(n%1)),infclass(Math.floor(n-1)+Math.log2(1/(1-(n%1)))%1)].flat()
 			}
